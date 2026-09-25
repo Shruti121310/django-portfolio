@@ -1,0 +1,786 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <!-- SEO Meta Tags -->
+  <title>Saimanty Chakraborty Shruti | Computer Science & Engineering Student</title>
+  <meta name="description" content="Portfolio of Saimanty Chakraborty Shruti, Computer Science & Engineering student at BAIUST. Strong foundation in C/C++, Python, OOP, Competitive Programming, and UI/UX design.">
+  <meta name="author" content="Saimanty Chakraborty Shruti">
+  <meta name="keywords" content="Saimanty Chakraborty Shruti, Portfolio, Computer Science, BAIUST, C++, Python, Competitive Programming, Frontend Developer, UI UX">
+
+  <!-- Open Graph / Facebook / LinkedIn -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Saimanty Chakraborty Shruti | Portfolio">
+  <meta property="og:description" content="CSE Undergraduate at BAIUST | Problem Solver | C++, Python, Frontend & UI/UX">
+  <meta property="og:image" content="{% static 'main/profile.png' %}">
+
+
+  <!-- Twitter Meta Tags -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Saimanty Chakraborty Shruti | Portfolio">
+  <meta name="twitter:description" content="CSE Undergraduate at BAIUST | Problem Solver | C++, Python, Frontend & UI/UX">
+  <meta name="twitter:image" content="{% static 'main/profile.png' %}">
+
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="{% static 'main/favicon.svg' %}">
+  <!-- Google Fonts: Plus Jakarta Sans (Body) & Outfit (Headings) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@500;600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="{% static 'main/style.css' %}">
+</head>
+<body>
+
+  <!-- =========================================================
+       NAVIGATION BAR
+       Sticky header with brand logo, nav links, and theme toggle
+       ========================================================= -->
+  <header class="site-header" id="top">
+    <div class="container nav-container">
+      <!-- Brand Logo -->
+      <a href="#hero" class="brand-logo" aria-label="Saimanty Chakraborty Shruti Homepage">
+        <span class="brand-name">Shruti<span class="brand-dot">.</span></span>
+      </a>
+
+      <!-- Desktop & Mobile Navigation Links -->
+      <nav class="site-nav" id="site-nav" aria-label="Primary Navigation">
+        <ul class="nav-list">
+          <li><a href="#hero" class="nav-link active">Home</a></li>
+          <li><a href="#about" class="nav-link">About</a></li>
+          <li><a href="#skills" class="nav-link">Skills</a></li>
+          <li><a href="#projects" class="nav-link">Projects</a></li>
+          <li><a href="#experience" class="nav-link">Experience</a></li>
+          <li><a href="#achievements" class="nav-link">Achievements</a></li>
+          <li><a href="#education" class="nav-link">Education</a></li>
+          <li><a href="#certifications" class="nav-link">Certifications</a></li>
+          <li><a href="#contact" class="nav-link">Contact</a></li>
+        </ul>
+      </nav>
+
+      <!-- Header Controls: Theme Toggle & Mobile Hamburger -->
+      <div class="nav-actions">
+        <!-- Light / Dark Mode Toggle Button -->
+        <button id="theme-toggle" class="theme-toggle-btn" type="button" aria-label="Toggle light or dark theme" title="Toggle theme">
+          <!-- Sun Icon (for dark mode) -->
+          <svg class="sun-icon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <circle cx="12" cy="12" r="5"></circle>
+            <line x1="12" y1="1" x2="12" y2="3"></line>
+            <line x1="12" y1="21" x2="12" y2="23"></line>
+            <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+            <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+            <line x1="1" y1="12" x2="3" y2="12"></line>
+            <line x1="21" y1="12" x2="23" y2="12"></line>
+            <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+            <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+          </svg>
+          <!-- Moon Icon (for light mode) -->
+          <svg class="moon-icon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+          </svg>
+        </button>
+
+        <!-- Mobile Menu Toggle Button -->
+        <button id="mobile-menu-toggle" class="mobile-menu-btn" type="button" aria-expanded="false" aria-controls="site-nav" aria-label="Toggle navigation menu">
+          <span class="hamburger-bar"></span>
+          <span class="hamburger-bar"></span>
+          <span class="hamburger-bar"></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- =========================================================
+         1. HERO SECTION
+         Main introduction, portrait photo, tagline, CTAs & socials
+         ========================================================= -->
+    <section class="hero-section" id="hero" aria-labelledby="hero-title">
+      <div class="container hero-container">
+        <!-- Hero Text Content -->
+        <div class="hero-content reveal-on-scroll">
+          <div class="status-badge">
+            <span class="status-dot" aria-hidden="true"></span>
+            <span>Seeking an internship or entry-level software development role</span>
+          </div>
+
+          <h1 id="hero-title" class="hero-title">
+            Hi, I'm <span class="gradient-text">Saimanty Chakraborty Shruti</span>
+          </h1>
+
+          <p class="hero-subtitle">Computer Science & Engineering Student</p>
+          <p class="hero-tagline">
+            CSE undergraduate who loves problem solving, C++ / Python and building clean user interfaces.
+          </p>
+
+          <!-- Hero Action Buttons -->
+          <div class="hero-actions">
+            <a href="#projects" class="btn btn-primary">
+              View Projects
+              <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <line x1="5" y1="12" x2="19" y2="12"></line>
+                <polyline points="12 5 19 12 12 19"></polyline>
+              </svg>
+            </a>
+            <a href="CV.pdf" download="Saimanty_Chakraborty_Shruti_CV.pdf" class="btn btn-secondary">
+              Download CV
+              <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+                <polyline points="7 10 12 15 17 10"></polyline>
+                <line x1="12" y1="15" x2="12" y2="3"></line>
+              </svg>
+            </a>
+            <a href="#contact" class="btn btn-outline">
+              Contact Me
+            </a>
+          </div>
+
+          <!-- Social Links (Inline SVGs) -->
+          <div class="hero-socials" aria-label="Social and professional links">
+            <!-- GitHub -->
+            <a href="https://github.com/Shruti121310" target="_blank" rel="noopener noreferrer" class="social-icon-btn" aria-label="GitHub Profile">
+              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path>
+              </svg>
+            </a>
+
+            <!-- LinkedIn -->
+            <a href="https://www.linkedin.com/in/saimanty-chakraborty-shruti" target="_blank" rel="noopener noreferrer" class="social-icon-btn" aria-label="LinkedIn Profile">
+              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path>
+                <rect x="2" y="9" width="4" height="12"></rect>
+                <circle cx="4" cy="4" r="2"></circle>
+              </svg>
+            </a>
+
+            <!-- Email -->
+            <a href="mailto:shruticb660@gmail.com" class="social-icon-btn" aria-label="Send an email to shruticb660@gmail.com">
+              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+                <polyline points="22,6 12,13 2,6"></polyline>
+              </svg>
+            </a>
+          </div>
+        </div>
+
+        <!-- Hero Portrait Image Frame -->
+        <div class="hero-image-wrapper reveal-on-scroll">
+          <div class="glow-backdrop" aria-hidden="true"></div>
+          <div class="image-frame">
+            <img src="{% static 'main/profile.png' %}" alt="Portrait of Saimanty Chakraborty Shruti" class="profile-photo" width="400" height="400" loading="eager">          </div>
+          <!-- Quick stats card attached to photo -->
+          <div class="hero-floating-card">
+            <span class="floating-badge-icon" aria-hidden="true">🎯</span>
+            <div class="floating-badge-text">
+              <strong>3.92 / 4.00</strong>
+              <span>CSE Undergraduate CGPA</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================================================
+         2. ABOUT SECTION
+         Concise bio written strictly from provided facts
+         ========================================================= -->
+    <section class="section about-section" id="about" aria-labelledby="about-heading">
+      <div class="container">
+        <div class="section-header reveal-on-scroll">
+          <span class="section-tag">About Me</span>
+          <h2 id="about-heading" class="section-title">Background & Academic Journey</h2>
+        </div>
+
+        <div class="about-grid">
+          <!-- Bio text -->
+          <div class="about-text-card card reveal-on-scroll">
+            <p class="about-lead">
+              I am a Computer Science & Engineering undergraduate at Bangladesh Army International University of Science & Technology (BAIUST), maintaining a <strong>3.92/4.00 CGPA</strong> after four semesters with an expected graduation in August 2028.
+            </p>
+            <p>
+              I possess a strong foundation in C/C++, Python, and object-oriented programming, backed by <strong>210+ problems solved on Codeforces</strong>. Alongside algorithmic problem solving, I bring hands-on experience in front-end development with HTML5 and CSS3, as well as Figma UI/UX design.
+            </p>
+            <p>
+              Currently expanding into backend development with Django and PostgreSQL, I have also proven my collaborative leadership as the team leader of a 7th-place IUPC team and as a former executive member of the university computer club.
+            </p>
+
+            <!-- Spoken Languages -->
+            <div class="languages-box">
+              <span class="languages-label">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"></circle><line x1="2" y1="12" x2="22" y2="12"></line><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path></svg>
+                Languages Spoken:
+              </span>
+              <span class="lang-pill">Bangla</span>
+              <span class="lang-pill">English</span>
+              <span class="lang-pill">Hindi</span>
+            </div>
+          </div>
+
+          <!-- Highlight Key Metrics -->
+          <div class="about-metrics-column">
+            <div class="metric-card card reveal-on-scroll">
+              <span class="metric-number">3.92</span>
+              <span class="metric-label">CGPA / 4.00 (BAIUST CSE)</span>
+              <span class="metric-sub">Perfect 4.00 GPA in Year 2, Term 1</span>
+            </div>
+
+            <div class="metric-card card reveal-on-scroll">
+              <span class="metric-number">210+</span>
+              <span class="metric-label">Codeforces Problems Solved</span>
+              <span class="metric-sub">Competitive Programming Practice</span>
+            </div>
+
+            <div class="metric-card card reveal-on-scroll">
+              <span class="metric-number">7th</span>
+              <span class="metric-label">Place IUPC Team Leader</span>
+              <span class="metric-sub">BAIUST CSE Spring Fest 2026</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================================================
+         3. SKILLS SECTION
+         Grouped into chips/cards with clear categories
+         ========================================================= -->
+    <section class="section skills-section" id="skills" aria-labelledby="skills-heading">
+      <div class="container">
+        <div class="section-header reveal-on-scroll">
+          <span class="section-tag">Expertise</span>
+          <h2 id="skills-heading" class="section-title">Technical Skills</h2>
+        </div>
+
+        <div class="skills-grid">
+          <!-- Programming & Design -->
+          <div class="skill-category-card card reveal-on-scroll">
+            <div class="category-header">
+              <div class="category-icon" aria-hidden="true">
+                <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="16 18 22 12 16 6"></polyline><polyline points="8 6 2 12 8 18"></polyline></svg>
+              </div>
+              <h3 class="category-title">Programming & Design</h3>
+            </div>
+            <div class="chips-container">
+  {% for skill in skills %}
+    {% if skill.category == "Programming & Design" %}
+      <span class="skill-chip">{{ skill.name }}</span>
+    {% endif %}
+  {% endfor %}
+</div>
+          </div>
+
+          <!-- Backend & Database (with Learning label) -->
+          <div class="skill-category-card card reveal-on-scroll">
+            <div class="category-header">
+              <div class="category-icon" aria-hidden="true">
+                <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><ellipse cx="12" cy="5" rx="9" ry="3"></ellipse><path d="M21 12c0 1.66-4 3-9 3s-9-1.34-9-3"></path><path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5"></path></svg>
+              </div>
+              <h3 class="category-title">Backend & Database</h3>
+            </div>
+            <div class="chips-container">
+  {% for skill in skills %}
+    {% if skill.category == "Backend & Database" %}
+      {% if skill.is_learning %}
+        <span class="skill-chip chip-learning">
+          {{ skill.name }} <span class="badge-tag">Learning</span>
+        </span>
+      {% else %}
+        <span class="skill-chip">{{ skill.name }}</span>
+      {% endif %}
+    {% endif %}
+  {% endfor %}
+</div>
+          </div>
+
+          <!-- Concepts -->
+          <div class="skill-category-card card reveal-on-scroll">
+            <div class="category-header">
+              <div class="category-icon" aria-hidden="true">
+                <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"></path><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"></path></svg>
+              </div>
+              <h3 class="category-title">Core Concepts</h3>
+            </div>
+            <div class="chips-container">
+  {% for skill in skills %}
+    {% if skill.category == "Core Concepts" %}
+      <span class="skill-chip">{{ skill.name }}</span>
+    {% endif %}
+  {% endfor %}
+</div>
+          </div>
+
+          <!-- Tools -->
+          <div class="skill-category-card card reveal-on-scroll">
+            <div class="category-header">
+              <div class="category-icon" aria-hidden="true">
+                <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"></path></svg>
+              </div>
+              <h3 class="category-title">Tools &amp; Workflow</h3>
+            </div>
+            <div class="chips-container">
+  {% for skill in skills %}
+    {% if skill.category == "Tools & Workflow" %}
+      <span class="skill-chip">{{ skill.name }}</span>
+    {% endif %}
+  {% endfor %}
+</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================================================
+         4. PROJECTS SECTION
+         Cards with title, description, tech tags, and links
+         ========================================================= -->
+    <section class="section projects-section" id="projects" aria-labelledby="projects-heading">
+      <div class="container">
+        <div class="section-header reveal-on-scroll">
+          <span class="section-tag">Portfolio</span>
+          <h2 id="projects-heading" class="section-title">Featured Projects</h2>
+        </div>
+
+        <div class="projects-grid">
+          <!-- Project 1: Hospital Emergency Simulation -->
+          {% for project in projects %}
+
+<article class="project-card card reveal-on-scroll">
+
+  {% if project.image %}
+  <img src="{{ project.image.url }}" alt="{{ project.title }}" class="project-image">
+{% endif %}
+
+  <div class="project-header">
+    <span class="project-type">{{ project.project_type }}</span>
+    <h3 class="project-title">{{ project.title }}</h3>
+  </div>
+
+  <p class="project-description">
+    {{ project.description }}
+  </p>
+
+  <div class="project-tags">
+    {% for tech in project.technology_list %}
+      <span class="tech-tag">{{ tech }}</span>
+    {% endfor %}
+  </div>
+
+  {% if project.github_link %}
+  <div class="project-actions">
+    <a href="{{ project.github_link }}"
+       target="_blank"
+       rel="noopener noreferrer"
+       class="btn btn-sm btn-primary">
+      View on GitHub
+    </a>
+  </div>
+{% endif %}
+
+{% if project.bank_link or project.cgpa_link or project.login_link %}
+  <div class="project-actions-stacked">
+
+    {% if project.bank_link %}
+      <a href="{{ project.bank_link }}"
+         target="_blank"
+         rel="noopener noreferrer"
+         class="text-link">
+        Bank Account System →
+      </a>
+    {% endif %}
+
+    {% if project.cgpa_link %}
+      <a href="{{ project.cgpa_link }}"
+         target="_blank"
+         rel="noopener noreferrer"
+         class="text-link">
+        CGPA Calculator →
+      </a>
+    {% endif %}
+
+    {% if project.login_link %}
+      <a href="{{ project.login_link }}"
+         target="_blank"
+         rel="noopener noreferrer"
+         class="text-link">
+        Login Page System →
+      </a>
+    {% endif %}
+
+  </div>
+{% endif %}
+  {% if project.live_link %}
+  <a href="{{ project.live_link }}"
+     target="_blank"
+     rel="noopener noreferrer"
+     class="btn btn-sm btn-primary">
+    Live Demo
+  </a>
+{% endif %}
+</article>
+
+{% endfor %}
+          <!-- =======================================================
+               5. DJANGO PROJECT TEMPLATE (COMMENTED OUT)
+               Uncomment this block whenever you launch your Django project!
+               =======================================================
+          <article class="project-card card reveal-on-scroll">
+            <div class="project-header">
+              <span class="project-type">Full Stack</span>
+              <h3 class="project-title">Your Django Project Title</h3>
+            </div>
+            <p class="project-description">
+              Describe your Django and PostgreSQL backend application here.
+            </p>
+            <div class="project-tags">
+              <span class="tech-tag">Django</span>
+              <span class="tech-tag">PostgreSQL</span>
+              <span class="tech-tag">Python</span>
+            </div>
+            <div class="project-actions">
+              <a href="#" target="_blank" rel="noopener noreferrer" class="btn btn-sm btn-primary">
+                View Project
+              </a>
+            </div>
+          </article>
+          ======================================================= -->
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================================================
+         5. EXPERIENCE SECTION
+         Timeline layout of internships and club positions
+         ========================================================= -->
+    <section class="section experience-section" id="experience" aria-labelledby="experience-heading">
+      <div class="container">
+        <div class="section-header reveal-on-scroll">
+          <span class="section-tag">Career</span>
+          <h2 id="experience-heading" class="section-title">Experience</h2>
+        </div>
+
+        <div class="timeline">
+          <!-- Experience 1: CodeAlpha -->
+          <div class="timeline-item reveal-on-scroll">
+            <div class="timeline-marker" aria-hidden="true"></div>
+            <div class="timeline-card card">
+              <div class="timeline-meta">
+                <span class="timeline-badge">Remote</span>
+                <h3 class="timeline-title">Programming Intern – CodeAlpha</h3>
+              </div>
+              <ul class="timeline-list">
+                <li>Completed assigned C++ programming tasks and published them with documentation on GitHub.</li>
+                <li>Built console-based projects: Bank Account Management System, CGPA Calculator, and Login Page System.</li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- Experience 2: BAIUST Computer Club -->
+          <div class="timeline-item reveal-on-scroll">
+            <div class="timeline-marker" aria-hidden="true"></div>
+            <div class="timeline-card card">
+              <div class="timeline-meta">
+                <span class="timeline-badge">Last Academic Semester</span>
+                <h3 class="timeline-title">Executive Member – BAIUST Computer Club</h3>
+              </div>
+              <ul class="timeline-list">
+                <li>Contributed to and competed in club programmes including IUPC, ICT quiz, and tech fest events.</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================================================
+         6. ACHIEVEMENTS SECTION
+         Cards ordered by importance
+         ========================================================= -->
+    <section class="section achievements-section" id="achievements" aria-labelledby="achievements-heading">
+      <div class="container">
+        <div class="section-header reveal-on-scroll">
+          <span class="section-tag">Milestones</span>
+          <h2 id="achievements-heading" class="section-title">Achievements</h2>
+        </div>
+
+        <div class="achievements-grid">
+          <!-- 1. IUPC -->
+          <div class="achievement-card card reveal-on-scroll highlight-achievement">
+            <div class="achievement-icon" aria-hidden="true">🏆</div>
+            <div class="achievement-content">
+              <h3 class="achievement-title">7th Place – IUPC (Team Leader)</h3>
+              <p class="achievement-sub">BAIUST CSE Spring Fest (2026)</p>
+              <p class="achievement-desc">Led the competitive programming team to secure 7th position in the Inter-University Programming Contest.</p>
+            </div>
+          </div>
+
+          <!-- 2. Hackathon -->
+          <div class="achievement-card card reveal-on-scroll">
+            <div class="achievement-icon" aria-hidden="true">💡</div>
+            <div class="achievement-content">
+              <h3 class="achievement-title">Top 15 out of 50+ Teams – Hackathon</h3>
+              <p class="achievement-sub">Hablu The Great, UI Project | CSE Fest BAIUST 2025</p>
+              <p class="achievement-desc">Ranked among top design teams by delivering a user-tested, prototype educational interface.</p>
+            </div>
+          </div>
+
+          <!-- 3. Codeforces -->
+          <div class="achievement-card card reveal-on-scroll">
+            <div class="achievement-icon" aria-hidden="true">⚡</div>
+            <div class="achievement-content">
+              <h3 class="achievement-title">210+ Problems Solved on Codeforces</h3>
+              <p class="achievement-sub">Algorithmic Problem Solving</p>
+              <p class="achievement-desc">Consistent practice in data structures, mathematical logic, and algorithmic efficiency.</p>
+            </div>
+          </div>
+
+          <!-- 4. ICT Quiz -->
+          <div class="achievement-card card reveal-on-scroll">
+            <div class="achievement-icon" aria-hidden="true">🥉</div>
+            <div class="achievement-content">
+              <h3 class="achievement-title">3rd Place – ICT Quiz Competition</h3>
+              <p class="achievement-sub">Technology &amp; Computing Knowledge</p>
+              <p class="achievement-desc">Awarded podium position for broad knowledge of computer science and ICT fundamentals.</p>
+            </div>
+          </div>
+
+          <!-- 5. Typing Competition -->
+          <div class="achievement-card card reveal-on-scroll">
+            <div class="achievement-icon" aria-hidden="true">⌨️</div>
+            <div class="achievement-content">
+              <h3 class="achievement-title">Best Female Performer – Typing Competition</h3>
+              <p class="achievement-sub">Ramadan Tech Fest</p>
+              <p class="achievement-desc">Achieved typing speed of 45 WPM with high accuracy under timed competition conditions.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================================================
+         7. EDUCATION SECTION
+         Academic timeline with CGPA and institution links
+         ========================================================= -->
+    <section class="section education-section" id="education" aria-labelledby="education-heading">
+      <div class="container">
+        <div class="section-header reveal-on-scroll">
+          <span class="section-tag">Academics</span>
+          <h2 id="education-heading" class="section-title">Education</h2>
+        </div>
+
+        <div class="timeline">
+          <!-- B.Sc. in CSE -->
+          <div class="timeline-item reveal-on-scroll">
+            <div class="timeline-marker" aria-hidden="true"></div>
+            <div class="timeline-card card">
+              <div class="timeline-meta">
+                <span class="timeline-badge">Expected Aug 2028</span>
+                <span class="badge-accent">Perfect 4.00 GPA in Year 2, Term 1</span>
+              </div>
+              <h3 class="timeline-title">B.Sc. in Computer Science &amp; Engineering</h3>
+              <p class="institution-name">
+                <a href="https://baiust.ac.bd/" target="_blank" rel="noopener noreferrer" class="institution-link">
+                  Bangladesh Army International University of Science &amp; Technology (BAIUST)
+                  <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
+                </a>
+              </p>
+              <div class="gpa-box">
+                <span class="gpa-pill">CGPA: <strong>3.92 / 4.00</strong> (after four semesters)</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- HSC -->
+          <div class="timeline-item reveal-on-scroll">
+            <div class="timeline-marker" aria-hidden="true"></div>
+            <div class="timeline-card card">
+              <div class="timeline-meta">
+                <span class="timeline-badge">2022</span>
+              </div>
+              <h3 class="timeline-title">Higher Secondary Certificate (HSC)</h3>
+              <div class="gpa-box">
+                <span class="gpa-pill">GPA: <strong>5.00 / 5.00</strong></span>
+              </div>
+            </div>
+          </div>
+
+          <!-- SSC -->
+          <div class="timeline-item reveal-on-scroll">
+            <div class="timeline-marker" aria-hidden="true"></div>
+            <div class="timeline-card card">
+              <div class="timeline-meta">
+                <span class="timeline-badge">2020</span>
+              </div>
+              <h3 class="timeline-title">Secondary School Certificate (SSC)</h3>
+              <div class="gpa-box">
+                <span class="gpa-pill">GPA: <strong>5.00 / 5.00</strong></span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================================================
+         8. CERTIFICATIONS & ACTIVITIES SECTION
+         Verified certifications & extracurricular activities
+         ========================================================= -->
+    <section class="section certifications-section" id="certifications" aria-labelledby="cert-heading">
+      <div class="container">
+        <div class="section-header reveal-on-scroll">
+          <span class="section-tag">Learning</span>
+          <h2 id="cert-heading" class="section-title">Certifications &amp; Activities</h2>
+        </div>
+
+        <div class="cert-grid">
+          <!-- Python Workshop Certification -->
+          <div class="cert-card card reveal-on-scroll">
+            <div class="cert-icon" aria-hidden="true">
+              <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="7"></circle><polyline points="8.21 13.89 7 23 12 20 17 23 15.79 13.88"></polyline></svg>
+            </div>
+            <div class="cert-info">
+              <h3 class="cert-title">Python Workshop</h3>
+              <p class="cert-status">Completed with Certificate</p>
+              <p class="cert-desc">Official university prerequisite training completed for the university Django internship programme.</p>
+            </div>
+          </div>
+
+          <!-- University Club Activity -->
+          <div class="cert-card card reveal-on-scroll">
+            <div class="cert-icon" aria-hidden="true">
+              <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M23 21v-2a4 4 0 0 0-3-3.87"></path><path d="M16 3.13a4 4 0 0 1 0 7.75"></path></svg>
+            </div>
+            <div class="cert-info">
+              <h3 class="cert-title">BAIUST Computer Club Leadership</h3>
+              <p class="cert-status">Executive Member</p>
+              <p class="cert-desc">Active organizer and participant across university competitive programming, technical quizzes, and technology festivals.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================================================
+         9. CONTACT SECTION
+         Clickable contact cards + mailto form
+         ========================================================= -->
+    <section class="section contact-section" id="contact" aria-labelledby="contact-heading">
+      <div class="container">
+        <div class="section-header reveal-on-scroll">
+          <span class="section-tag">Get In Touch</span>
+          <h2 id="contact-heading" class="section-title">Contact Me</h2>
+        </div>
+
+        <div class="contact-grid">
+          <!-- Direct Contact Cards -->
+          <div class="contact-cards-column">
+            <!-- Email Card -->
+            <a href="mailto:shruticb660@gmail.com" class="contact-card card reveal-on-scroll">
+              <div class="contact-card-icon" aria-hidden="true">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+              </div>
+              <div class="contact-card-info">
+                <span class="contact-label">Email</span>
+                <span class="contact-value">shruticb660@gmail.com</span>
+              </div>
+            </a>
+
+
+            <!-- LinkedIn Card -->
+            <a href="https://www.linkedin.com/in/saimanty-chakraborty-shruti" target="_blank" rel="noopener noreferrer" class="contact-card card reveal-on-scroll">
+              <div class="contact-card-icon" aria-hidden="true">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect x="2" y="9" width="4" height="12"></rect><circle cx="4" cy="4" r="2"></circle></svg>
+              </div>
+              <div class="contact-card-info">
+                <span class="contact-label">LinkedIn</span>
+                <span class="contact-value">linkedin.com/in/saimanty-chakraborty-shruti</span>
+              </div>
+            </a>
+
+            <!-- GitHub Card -->
+            <a href="https://github.com/Shruti121310" target="_blank" rel="noopener noreferrer" class="contact-card card reveal-on-scroll">
+              <div class="contact-card-icon" aria-hidden="true">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg>
+              </div>
+              <div class="contact-card-info">
+                <span class="contact-label">GitHub</span>
+                <span class="contact-value">github.com/Shruti121310</span>
+              </div>
+            </a>
+          </div>
+
+          <!-- Contact Form (Direct mailto trigger) -->
+          <div class="contact-form-card card reveal-on-scroll">
+
+  {% if messages %}
+    {% for message in messages %}
+      <div class="form-success-message">
+        {{ message }}
+      </div>
+    {% endfor %}
+  {% endif %}
+
+  <h3 class="form-title">Send a Direct Message</h3>
+            <p class="form-subtitle">Fill in the form to draft an email directly to my inbox.</p>
+
+            <form id="contact-form" class="contact-form" method="POST" action="{% url 'home' %}">
+              {% csrf_token %}
+              <div class="form-group">
+                <label for="name">Your Name</label>
+                <input type="text" id="name" name="name" class="form-input" placeholder="e.g. Alex Smith" required>
+              </div>
+
+              <div class="form-group">
+                <label for="email">Your Email</label>
+                <input type="email" id="email" name="email" class="form-input" placeholder="e.g. alex@example.com" required>
+              </div>
+
+              <div class="form-group">
+                <label for="subject">Subject</label>
+                <input type="text" id="subject" name="subject" class="form-input" placeholder="e.g. Internship Opportunity / Collaboration" required>
+              </div>
+
+              <div class="form-group">
+                <label for="message">Message</label>
+                <textarea id="message" name="message" rows="4" class="form-input form-textarea" placeholder="Hello Saimanty, I'd like to get in touch regarding..." required></textarea>
+              </div>
+
+              <button type="submit" class="btn btn-primary btn-block">
+                Open Email Client
+                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="22" y1="2" x2="11" y2="13"></line><polygon points="22 2 15 22 11 13 2 9 22 2"></polygon></svg>
+              </button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- =========================================================
+       FOOTER
+       Copyright, credit, and back-to-top button
+       ========================================================= -->
+  <footer class="site-footer">
+    <div class="container footer-container">
+      <div class="footer-left">
+        <p class="footer-credit">Designed &amp; Built by <strong>Saimanty Chakraborty Shruti</strong></p>
+        <p class="footer-copy">&copy; 2026. All rights reserved.</p>
+      </div>
+
+      <div class="footer-right">
+        <a href="#top" class="back-to-top-btn" aria-label="Back to top">
+          Back to Top
+          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="12" y1="19" x2="12" y2="5"></line><polyline points="5 12 12 5 19 12"></polyline></svg>
+        </a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Vanilla JavaScript -->
+  <script src="{% static 'main/script.js' %}"></script>
+</body>
+</html>
