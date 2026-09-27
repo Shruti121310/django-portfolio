@@ -6,3 +6,5 @@ db.sqlite3
 media/
 old_data_backup.json
 staticfiles/
+.vercel
+.env*
