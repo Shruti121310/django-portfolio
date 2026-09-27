@@ -5,3 +5,4 @@ __pycache__/
 db.sqlite3
 media/
 old_data_backup.json
+staticfiles/
